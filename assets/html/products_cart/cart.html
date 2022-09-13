@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="/assets/CSS/styles.css" />
+		<title>Shop</title>
+	</head>
+	<body>
+		<header class="nav_Shop_Cart">
+			<div class="overlay"></div>
+			<div class="container topContainer">
+				<h3 class="white-text cartHeading">CART CHECKOUT</h3>
+				<ul class="shop_cart_links">
+					<li class="shop_cart_link_home shop_cart_navLinks">
+						<a href="/index.html">Home</a>
+					</li>
+					<li class="shop_cart_link_cart shop_cart_navLinks">
+						<a href="#">
+							Cart<span class="checkout-number">0</span><ion-icon name="cart"></ion-icon>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<main class="checkoutDisplayMain">
+			<div class="container products-container">
+				<div class="row">
+					<div class="col s8 offset-s2">
+						<div class="product-header">
+							<h5 class="title">PRODUCT</h5>
+							<h5 class="price">PRICE</h5>
+							<h5 class="quantity">QUANTITY</h5>
+							<h5 class="total">TOTAL</h5>
+						</div>
+						<div class="products"></div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col s6 offset-s3 shipmentContainer">
+						<h4>Delivery&Shipment</h4>
+						<div class="deliveryOption">
+							<form action="#">
+								<p>
+									<label>
+										<input name="deliveryFees" type="radio" value="20" />
+										<span>PickUp</span>
+									</label>
+								</p>
+								<p>
+									<label>
+										<input name="deliveryFees" type="radio" value="100" />
+										<span>Deliver</span>
+									</label>
+								</p>
+								<p>
+									<label>
+										<input
+											class="with-gap"
+											name="deliveryFees"
+											type="radio"
+											value="250"
+										/>
+										<span>Express</span>
+									</label>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="checkingOut"></div>
+			</div>
+		</main>
+
+		<div class="fixed-action-btn show-mobile-only">
+			<a
+				class="btn-floating btn-large purple"
+				title="Back to Top"
+				onclick="scrolltoTop()"
+				id="scrollBtn"
+			>
+				<i class="material-icons">keyboard_arrow_up</i>
+			</a>
+		</div>
+
+		<footer class="text-center bg-dark">
+			<img
+				src="/assets/images/puzzle.png"
+				alt="Logo"
+				width="32px"
+				height="24px"
+				class="d-inline-block align-text-top"
+			/>
+			<i class="navYugiLogo">Yu-Gi-Oh</i>
+		</footer>
+
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+		<script defer src="cartRetry.js"></script>
+		<script defer src="/assets/JS/app.js"></script>
+		<script>
+			// When the user scrolls down 100px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction();
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+					document.getElementById('scrollBtn').style.display = 'inline-block';
+				} else {
+					document.getElementById('scrollBtn').style.display = 'none';
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function scrolltoTop() {
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+		</script>
+	</body>
+</html>
