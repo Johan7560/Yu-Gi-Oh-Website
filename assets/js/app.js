@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 	let wrapper = document.getElementById('wrapper');
-	let topLayer = wrapper.querySelector('.top');
-	let handle = wrapper.querySelector('.handle');
+	let topLayer = document.querySelector('.top');
+	let handle = document.querySelector('.handle');
 	let skew = 0;
 	let delta = 0;
 
@@ -45,7 +45,9 @@ if (buttonTwo !== null) {
 }
 
 // When the user clicks on the button, scroll to the top of the document
-//mybutton.addEventListener('click', backToTop);
+if (mybutton !== null) {
+	mybutton.addEventListener('click', backToTop);
+}
 
 // Fetches data from api for a card set
 async function cardSetGallery() {

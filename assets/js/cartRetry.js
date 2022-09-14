@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	}
 });
 
-function onLoad() {
-	localStorage.setItem('deliveryFee', 0);
-}
-
 // Grabbing a nodeList of every product on shop.html
 let carts = document.querySelectorAll('.add-cart');
 
@@ -94,7 +90,7 @@ let products = [
 	}
 ];
 
-// Looping products and adding eventListeners which will execute two functions
+// Looping products and adding event Listeners which will execute two functions
 for (let i = 0; i < carts.length; i++) {
 	carts[i].addEventListener('click', () => {
 		// cartNumbers() keeps track of the number of items in cart to display
@@ -110,6 +106,10 @@ function onLoadCartNumbers() {
 	if (productNumbers) {
 		document.querySelector('.shop_cart_link_cart span').textContent = productNumbers;
 	}
+}
+
+function onLoad() {
+	localStorage.setItem('deliveryFee', 0);
 }
 
 // The function that is added to the eventListener of each product tag
@@ -188,66 +188,65 @@ function displayCart() {
 		checkingOut.innerHTML = '';
 		Object.values(cartItems).map((item) => {
 			productContainer.innerHTML += `
-          <div class="product">
-            <ion-icon name="close-circle"></ion-icon>
-            <img class="cartProductImage" src="/assets/images/${item.tag}.png">
-            <span class="productName">
-              ${item.name}
-            </span> 
-          </div>
-          <div class="price">
-            R${item.price},00
-          </div>
-          <div class="quantity">
-            <ion-icon class='decrease' name='arrow-dropleft-circle'></ion-icon>
-            <span>
-              ${item.inCart}
-            </span>
-            <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>
-          </div>
-          <div class="total">
-            R${item.inCart * item.price},00
-          </div>         
+										<div class="product">
+											<ion-icon name="close-circle"></ion-icon>
+											<img class="cartProductImage" src="/assets/images/${item.tag}.png">
+											<span class="productName">
+											 	${item.name}
+											</span> 
+										</div>
+										<div class="price">
+											R${item.price},00
+										</div>
+										<div class="quantity">
+										<ion-icon class="decrease" name="arrow-back-circle-outline"></ion-icon>
+											<span>
+											${item.inCart}
+											</span>
+											<ion-icon class="increase" name="arrow-forward-circle-outline"></ion-icon>
+										</div>
+										<div class="total">
+											R${item.inCart * item.price},00
+										</div>         
         `;
 		});
 		checkingOut.innerHTML += `
     
-      <div class="row">
-        <div class="col s6 offset-s3 shipmentContainer">
-          <div class="checkoutCartDisplay">
-            <ul class="collection with-header">
-              <li class="collection-header"><h5>Confirm Order</h5></li>
-              <li class="collection-item">
-                <div>Delivery Fee
-                  <p class="secondary-content">R ${deliveryAmount}</p>
-                </div>
-              </li>
-              <li class="collection-item">
-                <div>Discount
-                  <p class="secondary-content">R 150</p>
-                </div>
-              </li>
-              <li class="collection-item">
-                <div>Total Excl. VAT
-                  <p class="secondary-content">
-                    R ${Math.round(cartCost)}
-                  </p>
-                </div>
-              </li>
-              <li class="collection-item">
-                <div>Total Incl. VAT
-                  <p class="secondary-content">
-                    R ${Math.round(cartCost * 1.15)}
-                  </p>
-                </div>
-              </li>
-            </ul>
-            <a id="checkOutBtn" class="waves-effect waves-light btn-large">Checkout</a>
-          </div>
-        </div>
-      </div>
-    `;
+				<div class="row justify-content-center text-center my-5">
+					<div class="col-5 shipmentContainer">
+						<div class="checkoutCartDisplay">
+							<h4 class="pt-3 pb-3">Confirm Order</h4>
+
+							<ul class="list-group list-group-flush">
+					  			<li class="list-group-item">
+									<div class="d-flex justify-content-between">Delivery Fee
+					  					<p class="secondary-content px-5">R ${deliveryAmount}</p>
+					  				</div>
+								</li>
+					  			<li class="list-group-item">
+									<div class="d-flex justify-content-between">Discount
+					  					<p class="secondary-content px-5">R 150</p>
+					  				</div>
+								</li>
+					  			<li class="list-group-item">
+									<div class="d-flex justify-content-between">Total Excl. VAT
+					  					<p class="secondary-content px-5">R ${Math.round(cartCost)}</p>
+					  				</div>
+								</li>
+					  			<li class="list-group-item">
+									<div class="d-flex justify-content-between">Total Incl. VAT
+					  					<p class="secondary-content px-5">R ${Math.round(cartCost * 1.15)}</p>
+					  				</div>
+								</li>
+							</ul>
+				  	
+							<a id="checkOutBtn" class="btn">Checkout</a>
+						</div>
+					</div>
+				</div>
+    		`;
 	}
+
 	// Functions that are invoked when displayCart() is called
 	manageQuantity();
 	deleteButtons();

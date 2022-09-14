@@ -190,6 +190,10 @@ body {
  SHOP & CART PAGE
 ********************************/
 
+.shop_cart_background {
+	background-color: slategray;
+}
+
 .nav_Shop_Cart {
 	background: linear-gradient(#9d50bb, #6e48aa);
 	background-repeat: no-repeat;
@@ -206,6 +210,34 @@ body {
 	color: #09f815;
 }
 
+.topContainer {
+	display: flex;
+}
+
+.shop_cart_links {
+	display: flex;
+	margin-left: auto;
+	margin-top: 20px;
+	align-items: center;
+	z-index: 1;
+	font-size: 30px;
+	font-family: 'Amatic SC', cursive;
+}
+
+.shop_cart_navLinks {
+	margin-right: 45px;
+}
+
+.shop_cart_navLinks a {
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.shop_cart_link_cart ion-icon {
+	font-size: 23px;
+}
+
 .checkout-number {
 	margin-left: 15px;
 }
@@ -213,9 +245,13 @@ body {
 /* --------------- SHOP PAGE ------------- */
 
 .card {
-	box-shadow: 0 0 8px 3px rgb(78, 14, 182), 0 0 20px 0 rgba(88, 14, 185, 0.952);
+	box-shadow: 0 0 8px 3px rgb(21, 167, 235), 0 0 20px 0 rgba(88, 14, 185, 0.952);
 	border-radius: 6px;
 }
+
+/* .productImage {
+	height: 190px;
+} */
 
 /* --------------- CART PAGE ------------- */
 
@@ -224,16 +260,28 @@ body {
 	margin: 100px auto;
 }
 
-/* .products ion-icon {
+.product ion-icon {
 	font-size: 20px;
-	color: rgb(238, 238, 245);
+	color: rgb(230, 41, 27);
 	margin: 0 10px;
 	cursor: pointer;
-} */
+}
+.quantity .decrease {
+	font-size: 20px;
+	color: rgb(119, 13, 241);
+	margin: 0 10px;
+	cursor: pointer;
+}
+.quantity .increase {
+	font-size: 20px;
+	color: rgb(119, 13, 241);
+	margin: 0 10px;
+	cursor: pointer;
+}
 
 .product-header {
 	display: flex;
-	border-bottom: 4px solid rgb(123, 35, 182);
+	border-bottom: 4px solid rgb(226, 158, 12);
 }
 
 .title {
@@ -268,11 +316,19 @@ body {
 	padding: 10px 0;
 }
 
-.checkoutCartDisplay h5 {
-	text-align: center;
-	color: blue;
-	font-weight: 400;
+.products {
+	display: flex;
+	flex-wrap: wrap;
 }
+
+.products img {
+	width: 75px;
+	height: 60px;
+}
+
+/* .checkoutCartDisplay {
+	color: #222;
+} */
 
 #checkOutBtn {
 	width: 100%;
@@ -296,6 +352,7 @@ body {
 }
 
 .card {
+	background-color: gray;
 	border: 1px solid #eee;
 	cursor: pointer;
 }
