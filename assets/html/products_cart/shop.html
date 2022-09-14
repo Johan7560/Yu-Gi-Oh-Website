@@ -16,7 +16,7 @@
 	<body>
 		<nav class="navbar navbar-dark navbar-expand-lg bg-dark p-4">
 			<div class="container-fluid d-flex justify-content-center align-items-center">
-				<a class="navbar-brand"> <i class="navYugiLogo">MERCH STORE</i></a>
+				<a class="navbar-brand" href="/"> <i class="navYugiLogo">MERCH STORE</i></a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -30,12 +30,15 @@
 				</button>
 				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="/assets/html/cards/card.html">Home</a>
+						<li class="nav-item p-2">
+							<a class="nav-link" href="/">Home</a>
 						</li>
 
-						<li class="nav-item">
-							<a class="nav-link" href="/assets/html/products_cart/shop.html">Cart</a>
+						<li class="nav-item p-2">
+							<a class="nav-link" href="/assets/html/products_cart/cart.html"
+								>Cart<i class="shop_cart_link_cart"
+									><ion-icon name="bag-check-outline"></ion-icon></i
+							></a>
 						</li>
 					</ul>
 				</div>
@@ -44,237 +47,353 @@
 
 		<main>
 			<div class="container my-5">
-				<div class="row align-items-center">
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/yugicap.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
+				<div class="wrapper">
+					<div class="container">
+						<div class="row mt-2 g-4">
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img src="/assets/images/yugicap.png" height="100" width="100" />
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/blueeyesblackshirt.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/yugibag.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/redeyesjacket.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 90</span>
+										<span>Yugi Cap</span>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/baseballjersey.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/darkmagiciangirlshirt.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i><ion-icon name="cart-outline"></ion-icon></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/dmghoodie.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
+										<div class="weight">
+											<small>Popular snap-back cap</small>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/yamifacemask.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img
+											src="/assets/images/blueeyesblackshirt.png"
+											height="100"
+											width="100"
+										/>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/exodiahoodie.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 120</span>
+										<span>Blue eyes t-shirt</span>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/yamihoodie.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
 
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/blackgreyhoodie.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
-								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
+										<div class="weight">
+											<small>Blue Eyes in Black</small>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="card">
-							<div class="row g-0">
-								<div class="col-5 col-sm-4">
-									<img
-										src="/assets/images/blueeyeswhiteshirt.png"
-										class="img-fluid w-100"
-										alt="card-horizontal-image"
-									/>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img src="/assets/images/yugibag.png" height="100" width="100" />
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 190</span>
+										<span>Backpack</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Limited Edition.</small>
+										</div>
+									</div>
 								</div>
-								<div class="col-7 col-sm-8">
-									<div class="card-body">
-										<h5 class="card-title">Cap</h5>
-										<p class="card-text">For those sunny days.</p>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img
+											src="/assets/images/redeyesjacket.png"
+											height="100"
+											width="100"
+										/>
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 150</span>
+										<span>Red Eyes Hoodie</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Bomber Jacket edition</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img
+											src="/assets/images/baseballjersey.png"
+											height="100"
+											width="100"
+										/>
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 150</span>
+										<span>Baseball Jersey</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Only limited stock</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img
+											src="/assets/images/darkmagiciangirlshirt.png"
+											height="100"
+											width="100"
+										/>
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 120</span>
+										<span>DMG T-Shirt</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>DMG t-shirt in black</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img src="/assets/images/dmghoodie.png" height="100" width="100" />
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 150</span>
+										<span>DMG Hoodie</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Classic DMG Hoodie</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img src="/assets/images/yamifacemask.png" height="100" width="100" />
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 40</span>
+										<span>Face Mask</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Defence against the Covid</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img src="/assets/images/exodiahoodie.png" height="100" width="100" />
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 150</span>
+										<span>Exodia Hoodie</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Whie stock lasts...</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img src="/assets/images/yamihoodie.png" height="100" width="100" />
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 150</span>
+										<span>Yami's Hoodie</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>The legendary Yami's Hoodie</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img
+											src="/assets/images/blackgreyhoodie.png"
+											height="100"
+											width="100"
+										/>
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 150</span>
+										<span>Black&Grey Edition Hoodie</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Only a few made of this OG Hoodie</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card p-3">
+									<div class="text-center">
+										<img
+											src="/assets/images/blueeyeswhiteshirt.png"
+											height="100"
+											width="100"
+										/>
+									</div>
+
+									<div class="product-details">
+										<span class="font-weight-bold d-block">R 120</span>
+										<span>Blue Eyes T-Shirt</span>
+
+										<div class="buttons d-flex flex-row">
+											<div class="cart">
+												<i class="fa fa-shopping-cart"
+													><ion-icon name="cart-outline"></ion-icon
+												></i>
+											</div>
+											<button class="btn btn-success cart-button btn-block">
+												<span class="dot">1</span>Add to cart
+											</button>
+										</div>
+
+										<div class="weight">
+											<small>Full printed blue-eyes t-shirt</small>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -284,7 +403,7 @@
 			</div>
 		</main>
 
-		<footer class="text-center bg-dark">
+		<footer class="text-center bg-dark fixed-bottom">
 			<img
 				src="/assets/images/puzzle.png"
 				alt="Logo"

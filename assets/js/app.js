@@ -45,7 +45,7 @@ if (buttonTwo !== null) {
 }
 
 // When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener('click', backToTop);
+//mybutton.addEventListener('click', backToTop);
 
 // Fetches data from api for a card set
 async function cardSetGallery() {

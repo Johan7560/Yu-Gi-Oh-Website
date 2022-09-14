@@ -4,31 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="/assets/CSS/styles.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
 		<title>Shop</title>
 	</head>
 	<body>
-		<header class="nav_Shop_Cart">
-			<div class="overlay"></div>
-			<div class="container topContainer">
-				<h3 class="white-text cartHeading">CART CHECKOUT</h3>
-				<ul class="shop_cart_links">
-					<li class="shop_cart_link_home shop_cart_navLinks">
-						<a href="/index.html">Home</a>
-					</li>
-					<li class="shop_cart_link_cart shop_cart_navLinks">
-						<a href="#">
-							Cart<span class="checkout-number">0</span><ion-icon name="cart"></ion-icon>
-						</a>
-					</li>
-				</ul>
+		<nav class="navbar navbar-dark navbar-expand-lg bg-dark p-4">
+			<div class="container-fluid d-flex justify-content-center align-items-center">
+				<a class="navbar-brand"> <i class="navYugiLogo">MERCH STORE</i></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">Cart</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</header>
+		</nav>
 
 		<main class="checkoutDisplayMain">
 			<div class="container products-container">
-				<div class="row">
-					<div class="col s8 offset-s2">
+				<div class="row justify-content-center">
+					<div class="col-8">
 						<div class="product-header">
 							<h5 class="title">PRODUCT</h5>
 							<h5 class="price">PRICE</h5>
@@ -39,11 +56,38 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col s6 offset-s3 shipmentContainer">
-						<h4>Delivery&Shipment</h4>
-						<div class="deliveryOption">
-							<form action="#">
+				<div class="row justify-content-center">
+					<div class="col-6 shipmentContainer">
+						<h4 class="text-center p-3">Delivery&Shipment</h4>
+						<div class="deliveryOption text-center m-3">
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value="20"
+									id="formCheckDefault"
+								/>
+								<label class="form-check-label" for="formCheckDefault">Pick Up</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value="100"
+									id="formCheckDefault"
+								/>
+								<label class="form-check-label" for="formCheckChecked">Delivery</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value="250"
+									id="formCheckDefault"
+								/>
+								<label class="form-check-label" for="formCheckChecked">Express</label>
+							</div>
+							<!-- <form action="#">
 								<p>
 									<label>
 										<input name="deliveryFees" type="radio" value="20" />
@@ -67,7 +111,7 @@
 										<span>Express</span>
 									</label>
 								</p>
-							</form>
+							</form> -->
 						</div>
 					</div>
 				</div>
@@ -76,51 +120,30 @@
 			</div>
 		</main>
 
-		<div class="fixed-action-btn show-mobile-only">
-			<a
-				class="btn-floating btn-large purple"
-				title="Back to Top"
-				onclick="scrolltoTop()"
-				id="scrollBtn"
-			>
-				<i class="material-icons">keyboard_arrow_up</i>
-			</a>
-		</div>
-
-		<footer class="text-center bg-dark">
+		<footer class="text-center bg-dark fixed-bottom">
 			<img
 				src="/assets/images/puzzle.png"
 				alt="Logo"
 				width="32px"
 				height="24px"
-				class="d-inline-block align-text-top"
+				class="d-inline-block align-text-top m-1"
 			/>
-			<i class="navYugiLogo">Yu-Gi-Oh</i>
 		</footer>
 
-		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-		<script defer src="cartRetry.js"></script>
-		<script defer src="/assets/JS/app.js"></script>
-		<script>
-			// When the user scrolls down 100px from the top of the document, show the button
-			window.onscroll = function () {
-				scrollFunction();
-			};
-
-			function scrollFunction() {
-				if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-					document.getElementById('scrollBtn').style.display = 'inline-block';
-				} else {
-					document.getElementById('scrollBtn').style.display = 'none';
-				}
-			}
-
-			// When the user clicks on the button, scroll to the top of the document
-			function scrolltoTop() {
-				document.body.scrollTop = 0; // For Safari
-				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-			}
-		</script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+			crossorigin="anonymous"
+		></script>
+		<script src="/assets/js/app.js"></script>
+		<script src="/assets/js/cartRetry.js"></script>
 	</body>
 </html>

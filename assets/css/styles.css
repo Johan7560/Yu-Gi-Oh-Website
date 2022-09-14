@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
 	font-family: 'MatrixIIOT';
 	src: url('MatrixIIOT-Bold.eot');
 	src: url('MatrixIIOT-Bold.eot?#iefix') format('embedded-opentype'),
@@ -9,9 +9,9 @@
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
-}
+} */
 
-@font-face {
+/* @font-face {
 	font-family: 'Matrix';
 	src: url('Matrix-Bold.eot');
 	src: url('Matrix-Bold.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +21,7 @@
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
-}
+} */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 /* Removes browser default */
@@ -44,7 +44,6 @@ body {
 .navYugiLogo {
 	font-family: 'Matrix';
 	font-size: 26px;
-
 	color: #fdab00;
 }
 
@@ -201,41 +200,10 @@ body {
 	box-shadow: 0 8px 18px -6px rgb(78, 14, 182), 0 0 20px 0 rgba(225, 217, 235, 0.952);
 }
 
-.overlay {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	height: 100%;
-	right: 0;
-	bottom: 0;
-	padding: 0 !important;
-	margin: 0 !important;
-	background-color: rgba(10, 10, 10, 0.3);
-}
-
-.shop_cart_links {
-	display: flex;
-	margin-left: auto;
-	margin-top: 20px;
-	align-items: center;
-	z-index: 1;
-	font-size: 30px;
-	font-family: 'Amatic SC', cursive;
-}
-
-.shop_cart_navLinks {
-	margin-right: 45px;
-}
-
-.shop_cart_navLinks a {
-	color: #fff;
-	cursor: pointer;
-	text-decoration: none;
-}
-
 .shop_cart_link_cart ion-icon {
-	font-size: 23px;
+	font-size: 20px;
+	padding-left: 8px;
+	color: #09f815;
 }
 
 .checkout-number {
@@ -256,12 +224,12 @@ body {
 	margin: 100px auto;
 }
 
-.products ion-icon {
+/* .products ion-icon {
 	font-size: 20px;
 	color: rgb(238, 238, 245);
 	margin: 0 10px;
 	cursor: pointer;
-}
+} */
 
 .product-header {
 	display: flex;
@@ -300,20 +268,6 @@ body {
 	padding: 10px 0;
 }
 
-.products {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.products img {
-	width: 75px;
-	height: 60px;
-}
-
-.checkoutCartDisplay {
-	color: #222;
-}
-
 .checkoutCartDisplay h5 {
 	text-align: center;
 	color: blue;
@@ -335,11 +289,121 @@ body {
 	box-shadow: 0 0 8px 3px rgb(78, 14, 182), 0 0 20px 0 rgba(88, 14, 185, 0.952);
 }
 
-.shipmentContainer h4 {
-	text-align: center;
-	color: #6e48aa;
+/* new styling for shop */
+
+.wrapper {
+	margin-top: 30px;
 }
 
-.deliveryOption form {
-	float: right;
+.card {
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+
+.weight {
+	margin-top: -65px;
+	transition: all 0.5s;
+}
+
+.weight small {
+	color: #e2dede;
+}
+
+.buttons {
+	padding: 10px;
+	background-color: #d6d4d44f;
+	border-radius: 4px;
+	position: relative;
+	margin-top: 7px;
+	opacity: 0;
+	transition: all 0.8s;
+}
+
+.dot {
+	height: 14px;
+	width: 14px;
+	background-color: green;
+	border-radius: 50%;
+	position: absolute;
+	left: 27%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 8px;
+	color: #fff;
+	opacity: 0;
+}
+
+.cart-button {
+	height: 48px;
+}
+
+.cart-button:focus {
+	box-shadow: none;
+}
+
+.cart {
+	position: relative;
+	height: 48px !important;
+	width: 50px;
+	margin-right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 11px;
+	border-radius: 5px;
+	font-size: 14px;
+	transition: 1s ease-in-out;
+	overflow: hidden;
+}
+
+.cart-button.clicked span.dot {
+	animation: item 0.3s ease-in forwards;
+}
+
+@keyframes item {
+	0% {
+		opacity: 1;
+		top: 30%;
+		left: 30%;
+	}
+
+	25% {
+		opacity: 1;
+		left: 26%;
+		top: 0%;
+	}
+
+	50% {
+		opacity: 1;
+		left: 23%;
+		top: -22%;
+	}
+
+	75% {
+		opacity: 1;
+		left: 19%;
+		top: -18%;
+	}
+
+	100% {
+		opacity: 1;
+		left: 14%;
+		top: 28%;
+	}
+}
+
+.card:hover .buttons {
+	opacity: 1;
+}
+
+.card:hover .weight {
+	margin-top: 10px;
+}
+
+.card:hover {
+	transform: scale(1.04);
+	z-index: 2;
+	overflow: hidden;
 }
