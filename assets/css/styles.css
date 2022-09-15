@@ -168,6 +168,9 @@ body {
 	width: 250px;
 }
 
+.card_cardSet-Bg {
+	background-color: gray;
+}
 /********************************
  cardSet.html
 ********************************/

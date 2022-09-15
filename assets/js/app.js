@@ -95,6 +95,7 @@ function getImages(data) {
 	data.data.forEach((images) => {
 		let card = images.card_images[0];
 		const newDiv = document.createElement('div');
+		newDiv.classList.add('col');
 		newDiv.innerHTML = `<img class="cardSet_singleImage" src=${card.image_url}></img>`;
 		cardSet.appendChild(newDiv);
 	});
